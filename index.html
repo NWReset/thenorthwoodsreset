@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Northwest Reset | Lake Cabin & Home Staging | NW Wisconsin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Source+Serif+Pro:wght@300;400;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-deep: #1a3a2e;
+            --forest-mid: #2d5a47;
+            --pine-green: #4a7c59;
+            --sage: #8fa890;
+            --copper: #b87333;
+            --copper-light: #c98751;
+            --copper-dark: #8b5a3c;
+            --cream: #f4f1ea;
+            --warm-white: #fdfbf7;
+            --bark-brown: #5d4e37;
+            --soft-shadow: rgba(26, 58, 46, 0.15);
+            --deep-shadow: rgba(26, 58, 46, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Text', serif;
+            background-color: var(--warm-white);
+            color: var(--forest-deep);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgb(0, 0, 0);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1.2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--copper);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--copper-light), var(--copper), var(--copper-light), transparent);
+        }
+
+        nav::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(184, 115, 51, 0.5), transparent);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo img {
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'Source Serif Pro', serif;
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--copper);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--copper);
+            background: rgba(184, 115, 51, 0.1);
+        }
+
+        .nav-links a:hover::before {
+            width: 80%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(26, 58, 46, 0.3), rgba(26, 58, 46, 0.5)),
+                        url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=1600&q=80') center/cover;
+            margin-top: 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 40% 50%, rgba(184, 115, 51, 0.15), transparent 60%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="n"><feTurbulence baseFrequency="0.9" numOctaves="4"/></filter><rect width="100" height="100" filter="url(%23n)" opacity="0.05"/></svg>');
+            pointer-events: none;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--warm-white);
+            z-index: 2;
+            max-width: 1000px;
+            padding: 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .hero-pre {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 1rem;
+            letter-spacing: 0.25em;
+            color: var(--cream);
+            margin-bottom: 2rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+            padding: 0.5rem 1rem;
+            display: inline-block;
+        }
+
+        .hero-tagline {
+            font-family: 'Lora', serif;
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            margin-bottom: 3rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            opacity: 0.95;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            padding: 1.3rem 3.2rem;
+            background: var(--copper);
+            color: var(--warm-white);
+            text-decoration: none;
+            font-family: 'Source Serif Pro', serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            border: 2px solid var(--copper);
+            box-shadow: 0 4px 15px rgba(184, 115, 51, 0.3);
+        }
+
+        .cta-primary:hover {
+            background: linear-gradient(135deg, var(--copper-dark) 0%, var(--copper) 100%);
+            border-color: var(--copper-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(184, 115, 51, 0.5), 0 0 20px rgba(184, 115, 51, 0.3);
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            padding: 1.3rem 3.2rem;
+            background: transparent;
+            color: var(--warm-white);
+            text-decoration: none;
+            font-family: 'Source Serif Pro', serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border: 2px solid var(--warm-white);
+            transition: all 0.4s ease;
+        }
+
+        .cta-secondary:hover {
+            background: var(--warm-white);
+            color: var(--forest-deep);
+            transform: translateY(-3px);
+        }
+
+        /* Introduction Section */
+        .intro {
+            background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest-mid) 50%, var(--pine-green) 100%);
+            color: var(--cream);
+            padding: 4rem 3rem;
+            position: relative;
+        }
+
+        .intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--copper), transparent);
+        }
+
+        .intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-content p {
+            margin-bottom: 1rem;
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        .intro-label {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--copper);
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .intro h2 {
+            font-family: 'Source Serif Pro', serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 2.5rem;
+            color: var(--warm-white);
+        }
+
+        .intro p {
+            font-size: clamp(1.15rem, 2vw, 1.4rem);
+            line-height: 1.9;
+            opacity: 0.92;
+            font-weight: 400;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 3rem;
+            background: var(--cream);
+        }
+
+        .services-header {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 6rem;
+        }
+
+        .section-label {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--copper);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .services-header h2 {
+            font-family: 'Source Serif Pro', serif;
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+            font-weight: 400;
+            color: var(--forest-deep);
+            margin-bottom: 2rem;
+            letter-spacing: 0.01em;
+        }
+
+        .services-header p {
+            font-size: 1.25rem;
+            color: var(--forest-mid);
+            font-weight: 400;
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: var(--warm-white);
+            padding: 3.5rem 2.8rem;
+            position: relative;
+            transition: all 0.5s ease;
+            border: 2px solid rgba(74, 124, 89, 0.2);
+            border-left: 6px solid var(--pine-green);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .service-card.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 0;
+            background: var(--copper);
+            transition: height 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px var(--soft-shadow);
+            border-left-color: var(--copper);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: var(--forest-deep);
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.01em;
+            position: relative;
+        }
+
+        .service-badge {
+            display: inline-block;
+            background: var(--copper);
+            color: var(--warm-white);
+            font-family: 'Source Serif Pro', serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.4rem 0.8rem;
+            margin-left: 0.8rem;
+            border-radius: 3px;
+            vertical-align: middle;
+            box-shadow: 0 2px 8px rgba(184, 115, 51, 0.3);
+        }
+
+        .service-description {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--forest-mid);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            max-width: 65ch;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            padding: 0.8rem 0;
+            padding-left: 1.8rem;
+            position: relative;
+            font-size: 1.05rem;
+            color: var(--forest-deep);
+            border-bottom: 1px solid rgba(74, 124, 89, 0.1);
+        }
+
+        .service-features li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: var(--copper);
+            font-size: 0.7rem;
+        }
+
+        .service-price {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--bark-brown);
+            font-weight: 700;
+        }
+
+        /* Process Section */
+        .process {
+            background: var(--forest-mid);
+            color: var(--cream);
+            padding: 9rem 3rem;
+        }
+
+        .process-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 6rem;
+        }
+
+        .process-header h2 {
+            font-family: 'Source Serif Pro', serif;
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+            font-weight: 400;
+            color: var(--warm-white);
+            margin-bottom: 2rem;
+        }
+
+        .process-steps {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(184, 115, 51, 0.3);
+            transition: all 0.4s ease;
+        }
+
+        .process-step:hover {
+            background: rgba(184, 115, 51, 0.1);
+            border-color: var(--copper);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 4rem;
+            font-weight: 300;
+            color: var(--copper);
+            line-height: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .process-step h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.7rem;
+            font-weight: 400;
+            color: var(--warm-white);
+            margin-bottom: 1rem;
+        }
+
+        .process-step p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--cream);
+            padding: 5rem 3rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest-mid) 100%);
+            padding: 5rem 3rem;
+            color: var(--cream);
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2.5rem 2rem;
+            border-left: 4px solid var(--copper);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-5px);
+        }
+
+        .testimonial-quote {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .testimonial-author {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 0.95rem;
+            color: var(--copper-light);
+            letter-spacing: 0.05em;
+        }
+
+        .testimonial-location {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 0.3rem;
+        }
+
+        .contact-wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .contact-info h2 {
+            font-family: 'Source Serif Pro', serif;
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            font-weight: 400;
+            color: var(--forest-deep);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .contact-info p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--forest-mid);
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        .contact-details {
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid rgba(74, 124, 89, 0.2);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-label {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--copper);
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .contact-item a {
+            color: var(--forest-deep);
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--copper);
+        }
+
+        .contact-form {
+            background: var(--warm-white);
+            padding: 3.5rem;
+            border: 3px solid var(--pine-green);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: 'Source Serif Pro', serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.8rem;
+            color: var(--forest-deep);
+            font-weight: 700;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1.1rem;
+            background: var(--cream);
+            border: 2px solid rgba(74, 124, 89, 0.3);
+            font-family: 'Lora', serif;
+            font-size: 1.05rem;
+            color: var(--forest-deep);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--copper);
+            background: var(--warm-white);
+        }
+
+        .form-group textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 1.4rem;
+            background: var(--forest-deep);
+            color: var(--warm-white);
+            border: 2px solid var(--forest-deep);
+            font-family: 'Source Serif Pro', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .submit-button:hover {
+            background: var(--copper);
+            border-color: var(--copper);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(184, 115, 51, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--forest-deep);
+            color: var(--sage);
+            padding: 3.5rem 3rem;
+            text-align: center;
+            border-top: 4px solid var(--copper);
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M100,80 L100,30 L85,50 L100,30 L115,50 L100,30 M250,90 L250,20 L230,45 L250,20 L270,45 L250,20 M400,85 L400,25 L385,48 L400,25 L415,48 L400,25 M550,78 L550,35 L538,52 L550,35 L562,52 L550,35 M700,88 L700,22 L682,47 L700,22 L718,47 L700,22 M850,82 L850,32 L835,50 L850,32 L865,50 L850,32 M1000,86 L1000,28 L983,48 L1000,28 L1017,48 L1000,28 M1150,80 L1150,30 L1135,50 L1150,30 L1165,50 L1150,30" fill="none" stroke="rgba(74, 124, 89, 0.15)" stroke-width="2"/></svg>') repeat-x bottom;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-logo img {
+            display: block;
+        }
+
+        .footer-text {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1.2rem 1.5rem;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+
+            .logo-container img {
+                height: 60px !important;
+            }
+
+            .hero {
+                height: auto;
+                min-height: 100vh;
+                padding: 8rem 1rem 4rem;
+            }
+
+            .hero-content {
+                padding: 2rem 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
+
+            .cta-primary,
+            .cta-secondary {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .contact-form {
+                padding: 2.5rem 2rem;
+            }
+
+            .intro,
+            .services,
+            .process,
+            .contact {
+                padding: 5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo-container">
+            <img src="logo.png" alt="The Northwoods Reset" style="height: 80px; width: auto; filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#services">Reset My Cabin</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-pre">Lake Cabin & Home Staging • Northwest Wisconsin</div>
+            <h1 style="font-family: 'Lora', serif; font-size: clamp(3rem, 9vw, 6.5rem); font-weight: 400; letter-spacing: 0.02em; margin-bottom: 1.5rem; line-height: 1.1; color: var(--warm-white); text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);">The Northwoods Reset</h1>
+            <p class="hero-tagline">Preparing Your Cabin for Its Next Chapter</p>
+            <div class="hero-cta">
+                <a href="#contact" class="cta-primary">Get Started</a>
+                <a href="#services" class="cta-secondary">Your Reset Options</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro">
+        <div class="intro-content">
+            <h2 style="font-weight: 300; font-style: italic; font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.5; margin-bottom: 1.5rem; color: var(--copper-light);">Every cabin holds a lifetime of memories, and letting go is never simple.</h2>
+            <p>Cabin transitions are emotional.<br>Behind every property is decades of summers, holidays, and family stories.</p>
+            <p>We handle every room with care—decluttering, styling, and staging so your property photographs beautifully and feels inviting to every buyer who walks through the door.</p>
+            <p>Whether you're helping aging parents let go of a beloved retreat, or it's a cherished family cabin that's been vacant for years, a little weekend cabin in the woods, or a year-round home ready for its next chapter, every property gets the same thoughtful, hands-on care—always respectful of what each property and family has been through.</p>
+            <p>Every home, big or small, deserves to be seen at its very best. Let us make your home shine—so you can focus on what matters most in life.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-header">
+            <div class="section-label">What We Offer</div>
+            <h2>Your Reset Options</h2>
+            <p>Thoughtful staging solutions for lake cabins and year-round homes</p>
+        </div>
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-icon">🏡</div>
+                <h3>Cabin Reset Consult</h3>
+                <p class="service-description">Sometimes you just need someone to walk through with you and help you see what needs to happen next. Whether you're helping aging parents, inheriting a property, or preparing your own cabin for sale, we'll spend 60–90 minutes creating a clear, realistic action plan—so you know exactly where to start.</p>
+                <p class="service-price">$150 – $300 <span style="font-size: 0.85rem; opacity: 0.85; text-transform: lowercase;">(includes $100 credit toward any cabin reset package)</span></p>
+                <ul class="service-features" style="font-size: 0.85rem; opacity: 0.85; margin-top: 0.5rem;">
+                    <li style="border: none; padding: 0.3rem 0; padding-left: 1.8rem;">Staged homes typically sell faster & for higher prices</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="service-icon">🔄</div>
+                <h3>Cabin Reset Refresh</h3>
+                <p class="service-description">Been on the market for a while? Getting pressure to lower the price? Before you drop your asking price, try a Cabin Reset Refresh. Whether your cabin is vacant or showing its age, we'll work within your budget to make targeted updates that shift buyer perception—fresh styling, decluttering, and photo-ready improvements that give buyers a reason to take a second look.</p>
+                <ul class="service-features">
+                    <li>Targeted declutter of main living areas</li>
+                    <li>Light styling & staging</li>
+                    <li>Layout tweaks for flow and feel</li>
+                    <li>Photo-ready reset</li>
+                </ul>
+                <p class="service-price">Starting at $1,200</p>
+                <ul class="service-features" style="font-size: 0.85rem; opacity: 0.85; margin-top: 0.5rem;">
+                    <li style="border: none; padding: 0.3rem 0; padding-left: 1.8rem;">Staged homes typically sell faster & for higher prices</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-icon">🪵</div>
+                <h3>Cabin Reset <span style="font-size: 0.9rem; font-weight: 400; color: var(--copper);">(Signature Service)</span><span class="service-badge">Most Popular</span></h3>
+                <p class="service-description">This is the heart of what we do. From cluttered or vacant to camera-ready! Whether your cabin is filled with years of memories—furniture, decor, personal items—or entirely vacant, we work within your budget to gently edit it into a space that feels welcoming and cared for. We handle every room with care so your property photographs beautifully and feels warm & inviting to every buyer who walks through the door. A photo-ready finish that honors what the cabin has been while preparing it for what's next.</p>
+                <ul class="service-features">
+                    <li>Decluttering & sorting — keep / donate / remove</li>
+                    <li>Space simplification across key rooms</li>
+                    <li>Styling + layout improvements</li>
+                    <li>Staging (as needed)</li>
+                    <li>Photo-ready reset</li>
+                </ul>
+                <p class="service-price">Starting at $2,800</p>
+                <ul class="service-features" style="font-size: 0.85rem; opacity: 0.85; margin-top: 0.5rem;">
+                    <li style="border: none; padding: 0.3rem 0; padding-left: 1.8rem;">Typically less than lowering your listing price</li>
+                    <li style="border: none; padding: 0.3rem 0; padding-left: 1.8rem;">Staged homes typically sell faster & for higher prices</li>
+                </ul>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-card">
+                <div class="service-icon">🤝</div>
+                <h3>Cabin Reset + Transition<span class="service-badge">Best for Estates</span></h3>
+                <p class="service-description">Feeling overwhelmed? This service is for families facing bigger transitions—aging parents moving, estate situations, out-of-state owners, or properties needing more attention. This is more than staging. This service includes our Cabin Reset services, but also adds coordination of additional services through our trusted partners so your property can shine top to bottom. Each property is different and each has different needs. We work with you and your budget to identify those needs, which may include coordination of cleaning services, estate sale services, or junk removal to prepare your cabin to photograph beautifully. We manage the details so you don't have to. From overwhelmed to a sigh of relief, we're here to help.</p>
+                <ul class="service-features" style="margin-bottom: 1.5rem;">
+                    <li style="padding: 0.3rem 0; padding-left: 1.8rem;">Decluttering & sorting — keep / donate / remove</li>
+                    <li style="padding: 0.3rem 0; padding-left: 1.8rem;">Space simplification across key rooms</li>
+                    <li style="padding: 0.3rem 0; padding-left: 1.8rem;">Styling + layout improvements</li>
+                    <li style="padding: 0.3rem 0; padding-left: 1.8rem;">Staging (as needed)</li>
+                    <li style="padding: 0.3rem 0; padding-left: 1.8rem;">Cleaning coordination</li>
+                    <li style="padding: 0.3rem 0; padding-left: 1.8rem;">Junk removal coordination (if needed)</li>
+                    <li style="padding: 0.3rem 0; padding-left: 1.8rem;">Estate sale coordination (if needed)</li>
+                    <li style="padding: 0.3rem 0; padding-left: 1.8rem;">Photo-ready reset</li>
+                </ul>
+                <p class="service-price">Starting at $3,800 <span style="font-size: 0.85rem; opacity: 0.85; text-transform: lowercase;">(custom pricing based on property needs)</span></p>
+                <ul class="service-features" style="font-size: 0.85rem; opacity: 0.85; margin-top: 0.5rem;">
+                    <li style="border: none; padding: 0.3rem 0; padding-left: 1.8rem;">Much less than dropping listing price $15-20K</li>
+                    <li style="border: none; padding: 0.3rem 0; padding-left: 1.8rem;">Staged homes typically sell faster & for higher prices</li>
+                </ul>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Add-On Services</h3>
+                <p class="service-description">Enhance your Cabin Reset services with these additional options.</p>
+                <ul class="service-features">
+                    <li><strong>Virtual Staging (Bundled):</strong><br><span style="font-size: 0.9rem; opacity: 0.8;">Up to 3 photos for $100, $30 each additional<br>When added to any Cabin Reset service</span></li>
+                    <li><strong>Cleaning Coordination: $100 – $300</strong><br><span style="font-size: 0.9rem; opacity: 0.8;">Connect you with trusted cleaning services and manage scheduling</span><br><span style="font-size: 0.85rem; opacity: 0.7; font-style: italic;">(Cleaning services billed separately by vendor)</span><br><span style="font-size: 0.85rem; opacity: 0.7; font-style: italic;">Available as an add-on to: Cabin Reset Refresh or Cabin Reset</span></li>
+                    <li><strong>Clean-Out Coordination: $100 – $300</strong><br><span style="font-size: 0.9rem; opacity: 0.8;">Connect you with trusted clean-out services and manage logistics</span><br><span style="font-size: 0.85rem; opacity: 0.7; font-style: italic;">(Clean-out services billed separately by vendor)</span><br><span style="font-size: 0.85rem; opacity: 0.7; font-style: italic;">Available as an add-on to: Cabin Reset Refresh or Cabin Reset</span></li>
+                </ul>
+                <ul class="service-features" style="font-size: 0.85rem; opacity: 0.85; margin-top: 0.5rem;">
+                    <li style="border: none; padding: 0.3rem 0; padding-left: 1.8rem;">Staged homes typically sell faster & for higher prices</li>
+                </ul>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="service-card">
+                <div class="service-icon">📸</div>
+                <h3>A La Carte</h3>
+                <p class="service-description">Not ready for a full service? Virtual staging is a great first step for cabins already on the market. Simply send us photos and we'll create digital staging with furniture and styling—quick turnaround, no site visit needed. Perfect for long-distance sellers or a fast refresh while your cabin is listed.</p>
+                <ul class="service-features">
+                    <li>Virtual Staging (Standalone): Up to 3 photos for $150, $40 each additional</li>
+                </ul>
+                <ul class="service-features" style="font-size: 0.85rem; opacity: 0.85; margin-top: 0.5rem;">
+                    <li style="border: none; padding: 0.3rem 0; padding-left: 1.8rem;">Staged homes typically sell faster & for higher prices</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Stat Callout Box -->
+        <div style="max-width: 900px; margin: 2.5rem auto 0; padding: 2.5rem 3rem; background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest-mid) 100%); border-left: 4px solid var(--copper); text-align: center;">
+            <p style="font-size: 1.3rem; line-height: 1.8; color: var(--cream); margin-bottom: 1rem; font-style: italic;">"Staged homes sell 73% faster and for 5-15% more than unstaged homes."</p>
+            <p style="font-size: 1.3rem; line-height: 1.8; color: var(--cream); margin-bottom: 1rem; font-style: italic;">"81% of buyers' agents say staging makes it easier for buyers to visualize the property as their future home."</p>
+            <p style="font-size: 0.95rem; color: var(--sage); letter-spacing: 0.1em; text-transform: uppercase;">— National Association of Realtors</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="section-label">Let's Talk</div>
+                <h2>Ready to Get Started?</h2>
+                <p>Whether you're helping aging parents transition from a beloved retreat, preparing a family cabin that's been vacant for years, or getting your year-round home ready for sale—we're here to help. Let's discuss your property and create a plan that works for you and your budget.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-label">Email</div>
+                        <a href="mailto:hello@thenorthwoodsreset.com">hello@thenorthwoodsreset.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-label">Service Area</div>
+                        <span style="font-size: 1.3rem; color: var(--forest-deep); font-weight: 600;">Northwest Wisconsin Lakes Region</span>
+                        <div style="font-size: 1rem; color: var(--forest-mid); margin-top: 0.5rem;">Serving Barron, Washburn, Sawyer, Rusk counties and surrounding area</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form action="https://formspree.io/f/maqllzer" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="consult">Cabin Reset Consult</option>
+                            <option value="refresh">Cabin Reset Refresh</option>
+                            <option value="cabin-reset">Cabin Reset (Signature Service)</option>
+                            <option value="transition">Cabin Reset + Transition</option>
+                            <option value="virtual-staging">Virtual Staging (A La Carte)</option>
+                            <option value="not-sure">Not Sure / Need Guidance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Property</label>
+                        <textarea id="message" name="message" required placeholder="Lake cabin or year-round home? How long has it been vacant? Any special considerations..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Us a Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo" style="font-family: 'Lora', serif; font-size: 2rem; font-weight: 400; color: var(--copper); letter-spacing: 0.03em; margin-bottom: 1.5rem;">
+                The Northwoods Reset
+            </div>
+            <p class="footer-text">&copy; 2026 The Northwoods Reset | Lake Cabin & Home Staging | Northwest Wisconsin</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('.contact-form form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            
+            // Show loading state
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    alert('Thank you for reaching out! We\'ll be in touch within 24 hours to discuss your property.');
+                    form.reset();
+                } else {
+                    alert('Oops! There was a problem submitting your form. Please email us directly at hello@thenorthwoodsreset.com');
+                }
+            } catch (error) {
+                alert('Oops! There was a problem submitting your form. Please email us directly at hello@thenorthwoodsreset.com');
+            }
+            
+            // Reset button
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+        });
+
+        // Scroll animations for service cards
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgb(0, 0, 0)';
+                nav.
