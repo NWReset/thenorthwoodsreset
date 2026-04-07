@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | The Northwoods Reset | Lake Cabin Staging Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Source+Serif+Pro:wght@300;400;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-deep: #1a3a2e;
+            --forest-mid: #2d5a47;
+            --pine-green: #4a7c59;
+            --sage: #8fa890;
+            --copper: #b87333;
+            --copper-light: #c98751;
+            --copper-dark: #8b5a3c;
+            --cream: #f4f1ea;
+            --warm-white: #fdfbf7;
+            --bark-brown: #5d4e37;
+            --soft-shadow: rgba(26, 58, 46, 0.15);
+            --deep-shadow: rgba(26, 58, 46, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Text', serif;
+            background-color: var(--warm-white);
+            color: var(--forest-deep);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1.2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 80px;
+            width: auto;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: var(--warm-white);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--copper-light);
+        }
+
+        /* Header */
+        .portfolio-header {
+            margin-top: 110px;
+            padding: 4rem 3rem 3rem;
+            background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest-mid) 100%);
+            text-align: center;
+            color: var(--warm-white);
+        }
+
+        .portfolio-header h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 400;
+            margin-bottom: 1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .portfolio-header p {
+            font-size: 1.3rem;
+            color: var(--cream);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Portfolio Sections */
+        .portfolio-section {
+            padding: 5rem 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--forest-deep);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--forest-mid);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px var(--soft-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px var(--deep-shadow);
+        }
+
+        .portfolio-image {
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-content {
+            padding: 1.75rem;
+        }
+
+        .portfolio-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--forest-deep);
+            margin-bottom: 0.75rem;
+        }
+
+        .portfolio-content p {
+            font-size: 1rem;
+            color: var(--forest-mid);
+            line-height: 1.7;
+        }
+
+        /* Divider */
+        .section-divider {
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 3rem;
+        }
+
+        .section-divider hr {
+            border: none;
+            border-top: 2px solid var(--sage);
+            opacity: 0.3;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 3rem;
+            background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest-mid) 100%);
+            text-align: center;
+            color: var(--warm-white);
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: var(--cream);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.1rem 2.8rem;
+            background: var(--copper);
+            color: var(--warm-white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background: var(--copper-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--forest-deep);
+            color: var(--cream);
+            padding: 3rem 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Lora', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--copper);
+            letter-spacing: 0.03em;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-text {
+            font-size: 0.95rem;
+            color: var(--sage);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .logo-container img {
+                height: 60px;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .nav-links a {
+                font-size: 0.95rem;
+            }
+
+            .portfolio-header {
+                padding: 3rem 1.5rem 2rem;
+            }
+
+            .portfolio-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cta-section {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo-container">
+            <img src="logo.png" alt="The Northwoods Reset">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Reset My Cabin</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <div class="portfolio-header">
+        <h1>Our Portfolio</h1>
+        <p>Real transformations from Northwest Wisconsin cabins and homes</p>
+    </div>
+
+    <!-- Physical Staging Section -->
+    <section class="portfolio-section">
+        <div class="section-title">
+            <h2>Physical Staging</h2>
+            <p>Hands-on decluttering, styling, and staging for lake cabins and homes</p>
+        </div>
+
+        <div class="portfolio-grid">
+            
+            <!-- Project 1: Cabin Bedroom -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="cabin-bedroom-2panel.jpg" alt="Cabin bedroom staging transformation">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Modern Northwoods Charm</h3>
+                    <p>Dated yellow walls transformed with gray shiplap, reclaimed wood headboard, and authentic cabin décor including bear art and buffalo plaid bedding.</p>
+                </div>
+            </div>
+
+            <!-- Project 2: Blue Bedroom -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="before-after-template.jpg" alt="Blue bedroom staging transformation">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Guest Bedroom Refresh</h3>
+                    <p>Empty room to welcoming guest space with styled bed, nightstands, lamps, and carefully curated artwork.</p>
+                </div>
+            </div>
+
+            <!-- Project 3: Kitchen/Dining -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="before-after-3panel.jpg" alt="Kitchen dining area transformation">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Cluttered Kitchen to Dining Space</h3>
+                    <p>Cleared overwhelming clutter and created an inviting dining area with styled table, vintage décor, and functional layout.</p>
+                </div>
+            </div>
+
+            <!-- Project 4: Moody Bedroom -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="bedroom-3panel-corrected.jpg" alt="Attic bedroom transformation">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Moody Attic Retreat</h3>
+                    <p>Transformed outdated bedroom by making dark wood paneling a design feature with cozy styling, sunset artwork, and intentional décor.</p>
+                </div>
+            </div>
+
+            <!-- Project 5: Kids Room -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="kids-room-2panel.jpg" alt="Kids room staging transformation">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Whimsical Play Space</h3>
+                    <p>Empty room to charming kids' space with tent, floral wallpaper, and playful styling that helps buyers envision family life.</p>
+                </div>
+            </div>
+
+            <!-- Project 6: Entryway -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="entryway-2panel.jpg" alt="Entryway staging transformation">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Welcoming Entryway</h3>
+                    <p>Cluttered space transformed into warm welcome with "Howdy y'all" sign, styled console table, and intentional lake cabin charm.</p>
+                </div>
+            </div>
+
+            <!-- Project 7: Home Office -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="office-2panel.jpg" alt="Home office staging transformation">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Bay Window Office</h3>
+                    <p>Bay window room transformed into functional workspace with styled desk, plants, updated curtains, and professional touches.</p>
+                </div>
+            </div>
+
+            <!-- Project 8: Cozy Bedroom -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="cozy-bedroom-2panel.jpg" alt="Bedroom refresh transformation">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Modern Farmhouse Bedroom</h3>
+                    <p>Dated floral curtains and old wallpaper replaced with fresh paint, modern textiles, and cozy farmhouse styling.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider">
+        <hr>
+    </div>
+
+    <!-- Virtual Staging Section -->
+    <section class="portfolio-section">
+        <div class="section-title">
+            <h2>Virtual Staging</h2>
+            <p>AI-powered staging solutions for properties that need buyer visualization</p>
+        </div>
+
+        <div class="portfolio-grid">
+            
+            <!-- Project 9: Virtual Entryway -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="virtual-staging-entryway.jpg" alt="Virtual staging entryway">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Entryway Reimagined (Virtual)</h3>
+                    <p>Dated floral wallpaper and old rug digitally transformed with modern gallery wall, clean styling, and bench seating.</p>
+                </div>
+            </div>
+
+            <!-- Project 10: Virtual Living Room -->
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="virtual-staging-living-room.jpg" alt="Virtual staging living room">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Living Room Transformation (Virtual)</h3>
+                    <p>Empty room with brick fireplace digitally staged with full furniture, built-in shelving, modern lighting, and cohesive design.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Transform Your Property?</h2>
+        <p>Whether you need physical staging or virtual solutions, we're here to help your cabin or home sell faster and for more.</p>
+        <a href="index.html#contact" class="cta-button">Get Started Today</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">The Northwoods Reset</div>
+        <p class="footer-text">&copy; 2026 The Northwoods Reset | Lake Cabin & Home Staging | Northwest Wisconsin</p>
+    </footer>
+
+</body>
+</html>
