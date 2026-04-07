@@ -125,9 +125,11 @@
         }
 
         .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .portfolio-item {
