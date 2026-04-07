@@ -131,7 +131,6 @@
         }
 
         .portfolio-item {
-            background: white;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 12px var(--soft-shadow);
@@ -143,38 +142,9 @@
             box-shadow: 0 8px 20px var(--deep-shadow);
         }
 
-        .portfolio-image {
-            aspect-ratio: 16/10;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .portfolio-image img {
+        .portfolio-item img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .portfolio-item:hover .portfolio-image img {
-            transform: scale(1.05);
-        }
-
-        .portfolio-content {
-            padding: 1.75rem;
-        }
-
-        .portfolio-content h3 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--forest-deep);
-            margin-bottom: 0.75rem;
-        }
-
-        .portfolio-content p {
-            font-size: 1rem;
-            color: var(--forest-mid);
-            line-height: 1.7;
+            display: block;
         }
 
         /* Divider */
@@ -319,95 +289,14 @@
         </div>
 
         <div class="portfolio-grid">
-            
-            <!-- Project 1: Cabin Bedroom -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="cabin-bedroom-2panel.jpg" alt="Cabin bedroom staging transformation">
-                </div>
-                <div class="portfolio-content">
-                    <h3>Modern Northwoods Charm</h3>
-                    <p>Dated yellow walls transformed with gray shiplap, reclaimed wood headboard, and authentic cabin décor including bear art and buffalo plaid bedding.</p>
-                </div>
-            </div>
-
-            <!-- Project 2: Blue Bedroom -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="before-after-template.jpg" alt="Blue bedroom staging transformation">
-                </div>
-                <div class="portfolio-content">
-                    <h3>Guest Bedroom Refresh</h3>
-                    <p>Empty room to welcoming guest space with styled bed, nightstands, lamps, and carefully curated artwork.</p>
-                </div>
-            </div>
-
-            <!-- Project 3: Kitchen/Dining -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="before-after-3panel.jpg" alt="Kitchen dining area transformation">
-                </div>
-                <div class="portfolio-content">
-                    <h3>Cluttered Kitchen to Dining Space</h3>
-                    <p>Cleared overwhelming clutter and created an inviting dining area with styled table, vintage décor, and functional layout.</p>
-                </div>
-            </div>
-
-            <!-- Project 4: Moody Bedroom -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="bedroom-3panel-corrected.jpg" alt="Attic bedroom transformation">
-                </div>
-                <div class="portfolio-content">
-                    <h3>Moody Attic Retreat</h3>
-                    <p>Transformed outdated bedroom by making dark wood paneling a design feature with cozy styling, sunset artwork, and intentional décor.</p>
-                </div>
-            </div>
-
-            <!-- Project 5: Kids Room -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="kids-room-2panel.jpg" alt="Kids room staging transformation">
-                </div>
-                <div class="portfolio-content">
-                    <h3>Whimsical Play Space</h3>
-                    <p>Empty room to charming kids' space with tent, floral wallpaper, and playful styling that helps buyers envision family life.</p>
-                </div>
-            </div>
-
-            <!-- Project 6: Entryway -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="entryway-2panel.jpg" alt="Entryway staging transformation">
-                </div>
-                <div class="portfolio-content">
-                    <h3>Welcoming Entryway</h3>
-                    <p>Cluttered space transformed into warm welcome with "Howdy y'all" sign, styled console table, and intentional lake cabin charm.</p>
-                </div>
-            </div>
-
-            <!-- Project 7: Home Office -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="office-2panel.jpg" alt="Home office staging transformation">
-                </div>
-                <div class="portfolio-content">
-                    <h3>Bay Window Office</h3>
-                    <p>Bay window room transformed into functional workspace with styled desk, plants, updated curtains, and professional touches.</p>
-                </div>
-            </div>
-
-            <!-- Project 8: Cozy Bedroom -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="cozy-bedroom-2panel.jpg" alt="Bedroom refresh transformation">
-                </div>
-                <div class="portfolio-content">
-                    <h3>Modern Farmhouse Bedroom</h3>
-                    <p>Dated floral curtains and old wallpaper replaced with fresh paint, modern textiles, and cozy farmhouse styling.</p>
-                </div>
-            </div>
-
+            <div class="portfolio-item"><img src="cabin-bedroom-2panel.jpg" alt="Cabin bedroom staging"></div>
+            <div class="portfolio-item"><img src="before-after-template.jpg" alt="Bedroom staging"></div>
+            <div class="portfolio-item"><img src="before-after-3panel.jpg" alt="Kitchen staging"></div>
+            <div class="portfolio-item"><img src="bedroom-3panel-corrected.jpg" alt="Bedroom staging"></div>
+            <div class="portfolio-item"><img src="kids-room-2panel.jpg" alt="Kids room staging"></div>
+            <div class="portfolio-item"><img src="entryway-2panel.jpg" alt="Entryway staging"></div>
+            <div class="portfolio-item"><img src="office-2panel.jpg" alt="Office staging"></div>
+            <div class="portfolio-item"><img src="cozy-bedroom-2panel.jpg" alt="Bedroom staging"></div>
         </div>
     </section>
 
@@ -424,29 +313,8 @@
         </div>
 
         <div class="portfolio-grid">
-            
-            <!-- Project 9: Virtual Entryway -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="virtual-staging-entryway.jpg" alt="Virtual staging entryway">
-                </div>
-                <div class="portfolio-content">
-                    <h3>Entryway Reimagined (Virtual)</h3>
-                    <p>Dated floral wallpaper and old rug digitally transformed with modern gallery wall, clean styling, and bench seating.</p>
-                </div>
-            </div>
-
-            <!-- Project 10: Virtual Living Room -->
-            <div class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="virtual-staging-living-room.jpg" alt="Virtual staging living room">
-                </div>
-                <div class="portfolio-content">
-                    <h3>Living Room Transformation (Virtual)</h3>
-                    <p>Empty room with brick fireplace digitally staged with full furniture, built-in shelving, modern lighting, and cohesive design.</p>
-                </div>
-            </div>
-
+            <div class="portfolio-item"><img src="virtual-staging-entryway.jpg" alt="Virtual staging entryway"></div>
+            <div class="portfolio-item"><img src="virtual-staging-living-room.jpg" alt="Virtual staging living room"></div>
         </div>
     </section>
 
